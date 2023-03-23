@@ -6,8 +6,13 @@ public class Tablero {
     private int[][] estadoSiguiente = new int[DIMENSION][DIMENSION];
 
     public void leerEstadoActual(){
+        for (int fila = 0; fila < DIMENSION; fila++) {
+            for (int columna = 0; columna < DIMENSION; columna++) {
+                int estado = estadoActual[fila][columna];
 
-
+                System.out.println(estado + " ");
+            }
+        }
     }
 
     public void generarEstadoActualPorMontecarlo(){
@@ -31,7 +36,13 @@ public class Tablero {
 
     @Override
     public String toString(){
-
-        return "";
+        StringBuilder sb = new StringBuilder();
+        for (int fila = 0; fila < DIMENSION; fila++) {
+            for (int columna = 0; columna < DIMENSION; columna++) {
+                sb.append(estadoActual[fila][columna] + " ");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 }
