@@ -31,7 +31,22 @@ public class Tablero {
     }
 
     public void transitarAlEstadoSiguiente(){
-
+        for (int fila = 0; fila < DIMENSION; fila++) {
+            for (int columna = 0; columna < DIMENSION; columna++) {
+                int  estado = estadoActual[fila][columna];
+                if(estadoActual[fila][columna] == 1){
+                    if( estado == 2 || estado == 3){
+                        estadoSiguiente[fila][columna] = 1;
+                    } else {
+                        estadoSiguiente[fila][columna] = 0;
+                    }
+                    estadoSiguiente[fila][columna] = 1;
+                } else {
+                    estadoSiguiente[fila][columna] = 0;
+                }
+                estadoSiguiente[fila][columna] = estadoActual[fila][columna];
+            }
+        }
     }
 
     @Override
