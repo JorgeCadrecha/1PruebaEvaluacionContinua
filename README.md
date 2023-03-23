@@ -1,7 +1,7 @@
 # 1PruebaEvaluacionContinua
 
 ## Nota
-Mi repositorio es: 
+Mi repositorio es:  https://github.com/JorgeCadrecha/1PruebaEvaluacionContinua.git
 
 ## Enuncidos
 
